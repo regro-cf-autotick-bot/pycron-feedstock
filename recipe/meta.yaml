@@ -1,5 +1,5 @@
 {% set name = "pycron" %}
-{% set version = "1.0.0" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 900f5bcb8fbf56826c02872382c41c6c2ed1f0b2fb6af3ce0a81ec203a6858fe
+  sha256: b916044e3e8253d5409c68df3ac64a3472c4e608dab92f40e8f595e5d3acb3de
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
   run:
-    - python
+    - python >=3.5
 
 test:
   imports:
@@ -29,7 +29,6 @@ about:
   home: https://github.com/kipe/pycron
   license: MIT
   license_family: MIT
-  # PR to add license_file to source dist: https://github.com/kipe/pycron/pull/17
   license_file: LICENSE
   summary: 'Simple cron-like parser, which determines if current datetime matches conditions.'
   dev_url: https://github.com/kipe/pycron
