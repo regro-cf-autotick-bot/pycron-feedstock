@@ -12,14 +12,14 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
   run:
-    - python
+    - python >=3.5
 
 test:
   imports:
@@ -29,7 +29,6 @@ about:
   home: https://github.com/kipe/pycron
   license: MIT
   license_family: MIT
-  # PR to add license_file to source dist: https://github.com/kipe/pycron/pull/17
   license_file: LICENSE
   summary: 'Simple cron-like parser, which determines if current datetime matches conditions.'
   dev_url: https://github.com/kipe/pycron
