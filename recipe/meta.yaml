@@ -1,5 +1,5 @@
 {% set name = "pycron" %}
-{% set version = "3.0.0" %}
+{% set version = "3.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b916044e3e8253d5409c68df3ac64a3472c4e608dab92f40e8f595e5d3acb3de
+  sha256: 6de8a555f721c74aa0bb681071a97da3d784ebf8ccea1d2bb9a3e66460b87da2
 
 build:
   noarch: python
