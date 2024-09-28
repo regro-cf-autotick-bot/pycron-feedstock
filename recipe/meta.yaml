@@ -16,14 +16,19 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.9,<3.13
     - pip
+    - poetry-core
   run:
-    - python >=3.5
+    - python >=3.9,<3.13
 
 test:
   imports:
     - pycron
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/kipe/pycron
